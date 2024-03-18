@@ -4,6 +4,10 @@ import {
 } from "react-router-dom";
 import Main from "../Layout/Main";
 import HomePage from "../pages/Home/HomePage/HomePage";
+import BiodatasPage from "../pages/Home/HomePage/BiodatasPage";
+import AboutUs from "../pages/Home/HomePage/AboutUs";
+import ContactUs from "../pages/Home/HomePage/ContactUs";
+import Login from "../pages/Home/HomePage/Login";
 
 export const router = createBrowserRouter([
     {
@@ -13,7 +17,24 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomePage></HomePage>
+            },
+            {
+                path: '/biodatas',
+                element: <BiodatasPage></BiodatasPage>
+            },
+            {
+                path: '/aboutUs',
+                element: <AboutUs></AboutUs>
+            },
+            {
+                path: '/contactUs',
+                element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             }
+
         ]
     },
 ]);
