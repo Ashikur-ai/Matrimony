@@ -11,6 +11,8 @@ import Login from "../pages/Home/HomePage/Login";
 import BiodataDetailsPage from "../pages/Home/HomePage/BiodataDetailsPage";
 import Register from "../pages/Home/HomePage/Register";
 import CheckoutPage from "../pages/Home/HomePage/CheckoutPage";
+import UserDashboard from "../pages/Home/UserDashboard/UserDashboard";
+import AdminDashboard from "../pages/Home/AdminDashboard/AdminDashboard";
 
 export const router = createBrowserRouter([
     {
@@ -48,7 +50,16 @@ export const router = createBrowserRouter([
             {
                 path: '/checkout',
                 element: <CheckoutPage></CheckoutPage>
+            },
+            {
+                path: '/userDashboard',
+                element: <UserDashboard></UserDashboard>
+            },
+            {
+                path: '/dashboard',
+                element: <AdminDashboard></AdminDashboard>
             }
+
 
         ]
     },
