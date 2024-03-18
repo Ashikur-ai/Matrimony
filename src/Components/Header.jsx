@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => {
+                toast.success('Logout successful')
+            })
+        .catch(error => toast.error(error.message))
+        
+    }
+
     return (
         <>
             <header className="text-gray-600 body-font">
@@ -10,7 +23,12 @@ const Header = () => {
                         <Link to="/biodatas" className="mr-5 hover:text-gray-900">BioDatas</Link>
                         <Link to="/aboutUs" className="mr-5 hover:text-gray-900">About Us</Link>
                         <Link to="/contactUs" className="mr-5 hover:text-gray-900">Contact Us</Link>
-                        <Link to="/login" className="hover:text-gray-900">Login</Link>
+                        {
+                            user ? <>
+                                <span onClick={handleLogout} className="hover:text-gray-900">Logout</span>
+                            </> : 
+                                <Link to="/login" className="hover:text-gray-900">Login</Link>
+                        }
                     </nav>
                     <Link to="/" className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
                         <img src="https://i.ibb.co/RCGswgG/icons8-love-30.png" alt="" />
