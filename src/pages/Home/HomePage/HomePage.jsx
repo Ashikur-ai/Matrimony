@@ -3,6 +3,8 @@ import Header from '../../../Components/Header';
 import Banner from '../../../Components/HomePage/Banner';
 import { Helmet } from 'react-helmet-async';
 import PremiumMembers from '../../../Components/HomePage/PremiumMembers';
+import SuccessStory from '../../../Components/HomePage/SuccessStory';
+import Counter from '../../../Components/HomePage/Counter';
 
 const HomePage = () => {
     return (
@@ -13,7 +15,9 @@ const HomePage = () => {
 
             <Header></Header>
             <Banner />
-            <PremiumMembers/>
+            <PremiumMembers />
+            <Counter></Counter>
+            <SuccessStory></SuccessStory>
         </>
     );
 };
