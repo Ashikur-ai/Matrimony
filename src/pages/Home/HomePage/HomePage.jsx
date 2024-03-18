@@ -1,12 +1,20 @@
 import React from 'react';
 import Header from '../../../Components/Header';
+import Banner from '../../../Components/HomePage/Banner';
+import { Helmet } from 'react-helmet-async';
+import PremiumMembers from '../../../Components/HomePage/PremiumMembers';
 
 const HomePage = () => {
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>HomePage | Matrimony</title>
+            </Helmet>
+
             <Header></Header>
-            <h2>This is home</h2>
-        </div>
+            <Banner />
+            <PremiumMembers/>
+        </>
     );
 };
 
