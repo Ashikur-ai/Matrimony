@@ -10,6 +10,7 @@ import ContactUs from "../pages/Home/HomePage/ContactUs";
 import Login from "../pages/Home/HomePage/Login";
 import BiodataDetailsPage from "../pages/Home/HomePage/BiodataDetailsPage";
 import Register from "../pages/Home/HomePage/Register";
+import CheckoutPage from "../pages/Home/HomePage/CheckoutPage";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/checkout',
+                element: <CheckoutPage></CheckoutPage>
             }
 
         ]

@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from '../../../Components/Header';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const BiodatasPage = () => {
     return (
         <>
+            <Helmet>
+                <title>All BioData | MatriMony</title>
+            </Helmet>
             <Header></Header>
             <section className="text-gray-600 body-font">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
